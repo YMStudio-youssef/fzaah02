@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="right">
+                    <div class="menu-bar">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <a href="">
+                        <img src="images/logo.webp" alt="" class="logo">
+                    </a>
+                </div>
+                <div class="center">
+                    <input type="search" class="input" placeholder="ادخل كلمة البحث: ">
+                </div>
+                <div class="left">
+                    <ul>
+                        <li><i class="fa-solid fa-user"></i></li>
+                        <li><i class="fa-solid fa-basket-shopping"></i></li>
+                        <li>0 ر.س</li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="responsive-menu">
+                <input type="search" class="input" placeholder="ادخل كلمة البحث: ">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="product-show">
+                <div class="image">
+                    <img src="images/05.png" alt="product image" class="product-img">
+                </div>
+                <div class="info">
+                    <h2>طلب اعادة البيع</h2>
+                    <ul class="evaluation">
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li>(352 تقييم)</li>
+                    </ul>
+                    <h3>0 ر.س</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci possimus consequuntur et eveniet! Eum officiis voluptatibus deleniti modi maxime, nesciunt explicabo, corrupti accusamus itaque inventore ratione pariatur rem excepturi.</p>
+                </div>
+            </section>
+            <section class="order">
+                <div class="order-form">
+                    <h3>اضافة الى السلة</h3>
+                    <form action="" class="add-order">
+                        <select class="">
+                            <option value="">اسم المتجر: </option>
+                            <option value="">متجر 1</option>
+                            <option value="">متجر 2</option>
+                            <option value="">متجر 3</option>
+                        </select>
+                        <select class="">
+                            <option value="">اسم المنتج</option>
+                            <option value="">منتج 1</option>
+                            <option value="">منتج 2</option>
+                            <option value="">منتج 3</option>
+                        </select>
+                        <button>اضافة صنف جديد</button>
+                        <label>
+                            <input type="radio" class="radioBtn">
+                            مدة سريان هذا العقد 48 ساعه كحد اقصى وفي حال اخلالي باحد الشروط اتحمل المسؤولية التامه
+                        </label>
+                        <br>
+                        <a href="#">سياسية الخصوصية</a>
+                        <button>تقديم الطلب</button>
+                    </form>
+                </div>
+                <div class="order-table">
+                    <table id="myTable">
+                        <thead>
+                            <tr>
+                                <th>اسم المتجر</th>
+                                <th>المنتج</th>
+                                <th>التحكم</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>John</td>
+                                <td>
+                                    <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>Jane</td>
+                                <td>
+                                    <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                                    <button class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="column1">
+                <h2>خدمة فزعة</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil nisi dolores officiis consequatur quasi.</p>
+                <span>الرقم الضريبي</span>
+                <p>054 021 3290</p>
+            </div>
+            <div class="column2">
+                <h2>روابط مهمة</h2>
+                <ul>
+                    <li><a href="#">ما هي خدمة فزعة؟</a></li>
+                    <li><a href="#">الشروط والاحكام</a></li>
+                    <li><a href="#">سياسية الاستبدال والاسترجاع</a></li>
+                    <li><a href="#">سياسية الاستخدام والخصوصية</a></li>
+                </ul>
+            </div>
+            <div class="column3">
+                <h2>تواصل معنا</h2>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        054 021 3290
+                        <!-- <br> -->
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        056 525 8902
+                        <!-- <br> -->
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-mobile"></i>
+                        057 089 0457
+                        <!-- <br> -->
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        djangodeveloper6@gmail.com
+                        <!-- <br> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable({
+                "paging": true,             // Enable pagination
+                "lengthChange": true,       // Enable the option to change the number of records per page
+                "searching": true,          // Enable search functionality
+                "ordering": true,           // Enable column sorting
+                "info": true,               // Show information about the table (e.g., "Showing 1 to 10 of 20 entries")
+                "autoWidth": true,          // Automatically adjust the column widths
+                "responsive": true,         // Enable responsive mode for better display on mobile devices
+                "columnDefs": [             // Define specific configurations for individual columns
+                { "orderable": false, targets: [2] }  // Disable sorting for the third column
+                ],
+                "language": {               // Customize the text used by DataTables
+                    "lengthMenu": "Display _MENU_ records per page",
+                    "zeroRecords": "No matching records found",
+                    "info": "Showing _START_ to _END_ of _TOTAL_ entries",
+                    "infoEmpty": "Showing 0 to 0 of 0 entries",
+                    "search": "Search:",
+                    "paginate": {
+                        "first": "First",
+                        "last": "Last",
+                        "next": "Next",
+                        "previous": "Previous"
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

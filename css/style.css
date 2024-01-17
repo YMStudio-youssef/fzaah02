@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+    direction: rtl;
+    list-style: none;
+}
+body{
+    background-color: #F9FAFB;
+}
+.container{
+    padding: 0 15px;
+    margin: auto;
+}
+
+/* Header Style Start */
+header{
+    background-color: #fff;
+    margin: 10px 0;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav .right{
+    order: 1;
+    display: flex;
+    align-items: center;
+}
+header nav .right .menu-bar i{
+    cursor: pointer;
+    font-size: 20px;
+}
+header nav .right .logo{
+    width: 120px;
+    height: 50px;
+}
+header nav .center{
+    order: 2;
+}
+header nav .center input{
+    width: 480px;
+    padding: 12px;
+    border-radius: 27px;
+    border: none;
+    background-color: #d9d9d9;
+    color: #000;
+}
+header nav .center input::placeholder{
+    color: #000;
+}
+header nav .left{
+    order: 3;
+}
+header nav .left ul{
+    display: flex;
+}
+header nav ul li *{
+    margin: 0 6px;
+    cursor: pointer;
+}
+header .responsive-menu{
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+header .responsive-menu input{
+    width: 70%;
+    padding: 12px;
+    border-radius: 27px;
+    border: none;
+    background-color: #d9d9d9;
+    color: #000;
+}
+header .responsive-menu input::placeholder{
+    color: #000;
+}
+/* Header Style End */
+
+/* Product Show Style Start */
+.product-show{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.product-show .image{
+    text-align: center;
+    width: auto;
+    overflow: hidden;
+}
+.product-show .image img{
+    /* object-fit: contain; */
+    /* width: 80%; */
+}
+.product-show .info .evaluation{
+    display: flex;
+}
+.product-show .info .evaluation i{
+    color: #fbbf24;
+}
+.product-show .info .evaluation li:last-child{
+    color: gray;
+}
+/* Product Show Style End */
+
+/* Order Style Start */
+.order{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+.order .order-form{}
+.order .order-form select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+.order .order-form a{
+    color: #000;
+    margin: 10px 0;
+    display: inline-block;
+}
+.order .order-form button{
+    display: block;
+    background-color: #144843;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.order .order-form button:last-child{
+    width: 100%;
+}
+.order .order-table{
+    overflow-x: auto;
+}
+/* Order Style End */
+
+/* Footer Style Start */
+footer{
+    background-color: #f3f4f6;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+footer .column1 *:not(:first-child){
+    margin: 10px 0;
+}
+footer .column1 p{
+    color: #6B7280;
+}
+footer .column1 span{
+
+}
+footer .column2 ul li{
+    margin: 10px 0;
+}
+footer .column2 ul li a{
+    color: #6B7280;
+}
+footer .column3 ul li{
+    align-items: center;
+    font-weight: 700;
+}
+footer .column3 ul li i{
+    font-size: 20px;
+    margin: 10px 0;
+    margin-left: 10px !important;
+    font-weight: 700;
+}
+/* Footer Style End */
+
+/* Media Queries */
+@media (max-width: 676px){
+    footer{
+        text-align: center;
+    }
+}
+@media (max-width: 767px){
+    header nav .center{
+        display: none;
+    }
+    .order-table table{
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+    header nav .right .menu-bar{
+        display: none;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+/* Framework Start */
+.delete-btn{
+    padding: 10px;
+    color: white;
+    background-color: #ff0000;
+    border: none;
+    cursor: pointer;
+}
+.edit-btn{
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    background-color: #fbbf24;
+}
+/* Framework End */
