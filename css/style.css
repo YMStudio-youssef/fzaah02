@@ -5,6 +5,7 @@
     transition: all .3s ease-in-out;
     text-decoration: none;
     direction: rtl;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     list-style: none;
 }
 body{
@@ -13,6 +14,7 @@ body{
 .container{
     padding: 0 15px;
     margin: auto;
+    width: 90%;
 }
 
 /* Header Style Start */
@@ -81,64 +83,144 @@ header .responsive-menu input::placeholder{
 /* Header Style End */
 
 /* Product Show Style Start */
-.product-show{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+.product-show {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
-.product-show .image{
-    text-align: center;
-    width: auto;
-    overflow: hidden;
+
+.product-show .image {
+  overflow: hidden;
 }
-.product-show .image img{
-    /* object-fit: contain; */
-    /* width: 80%; */
+
+.product-show .image img {
+  width: 100%;
+  display: block;
 }
-.product-show .info .evaluation{
-    display: flex;
+
+.product-show .info .evaluation {
+  display: flex;
 }
-.product-show .info .evaluation i{
-    color: #fbbf24;
+
+.product-show .info .evaluation i {
+  color: #fbbf24;
 }
-.product-show .info .evaluation li:last-child{
-    color: gray;
+
+.product-show .info .evaluation li:last-child {
+  color: gray;
 }
+
+@media (max-width: 575.98px) {
+  .product-show {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .product-show {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+@media (min-width: 1200px) { }
 /* Product Show Style End */
 
 /* Order Style Start */
-.order{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 30px;
-    align-items: center;
+/* .order {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  align-items: center;
+  /* overflow-x: auto; Add this line to enable horizontal scrolling
 }
-.order .order-form{}
-.order .order-form select{
+
+.order .order-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.order .order-form a {
+  color: #000;
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.order .order-form button {
+  display: block;
+  background-color: #144843;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.order .order-form button:last-child {
+  width: 100%;
+}
+
+.order .order-table {
+  overflow-x: auto;
+  width: 100%;
+}
+.order .order-tabel table{
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+} */
+
+.order {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  gap: 30px;
+  align-items: center;
 }
-.order .order-form a{
-    color: #000;
-    margin: 10px 0;
-    display: inline-block;
+
+.order .order-form {
+  width: 100%;
 }
-.order .order-form button{
-    display: block;
-    background-color: #144843;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin: 10px 0;
+
+.order .order-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
 }
-.order .order-form button:last-child{
-    width: 100%;
+
+.order .order-form a {
+  color: #000;
+  margin: 10px 0;
+  display: inline-block;
 }
-.order .order-table{
-    overflow-x: auto;
+
+.order .order-form button {
+  display: block;
+  background-color: #144843;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
 }
+
+.order .order-form button:last-child {
+  width: 100%;
+}
+
+.order .order-table {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.order .order-table table {
+  width: 100%;
+}
+
 /* Order Style End */
 
 /* Footer Style Start */
@@ -157,9 +239,6 @@ footer .column1 *:not(:first-child){
 }
 footer .column1 p{
     color: #6B7280;
-}
-footer .column1 span{
-
 }
 footer .column2 ul li{
     margin: 10px 0;
@@ -180,37 +259,47 @@ footer .column3 ul li i{
 /* Footer Style End */
 
 /* Media Queries */
-@media (max-width: 676px){
-    footer{
-        text-align: center;
+@media (max-width: 575.98px) {
+    header nav .center {
+      display: none;
+      }
+    
+    .order-table table {
+      font-size: 14px;
     }
 }
-@media (max-width: 767px){
-    header nav .center{
-        display: none;
-    }
-    .order-table table{
-        font-size: 14px;
-    }
+
+@media (max-width: 767px) {
+  footer {
+    text-align: center;
+    font-size: 12px;
+  }
+  footer .container {
+    grid-template-columns: 1fr;
+  }
 }
-@media (min-width: 768px){
-    .container{
-        width: 750px;
-    }
-    header nav .right .menu-bar{
-        display: none;
-    }
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  header nav .center {
+    display: none;
+  }
+  
+  .order-table table {
+    font-size: 14px;
+  }
 }
-@media (min-width: 992px){
-    .container{
-        width: 970px;
-    }
+
+@media (min-width: 768px) {
+  header nav .right .menu-bar {
+    display: none;
+  }
 }
-@media (min-width: 1200px){
-    .container{
-        width: 1170px;
-    }
-}
+
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+@media (min-width: 1200px) {}
 
 /* Framework Start */
 .delete-btn{
